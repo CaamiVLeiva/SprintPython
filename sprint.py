@@ -3,8 +3,8 @@ import string
 
 #Elaborar un programa que recorra una lista con los nombres de 10 de sus futuros usuarios de tu
 #aplicación (pueden ser personas, pacientes, organizaciones sociales o instituciones públicas).
-usuarios = ["Usuario1", "Usuario2", "Usuario3", "Usuario4", "Usuario5",
-            "Usuario6", "Usuario7", "Usuario8", "Usuario9", "Usuario10"]
+usuarios = ["John Doe", "Alice Smith", "Michael Johnson", "Emily Brown", "Daniel Wilson",        
+            "Olivia Davis", "David Martinez", "Sophia Taylor", "Matthew Anderson", "Emma Thomas"]
 
 cuentas = {}
 
@@ -14,7 +14,7 @@ def crear_cuenta(usuario):
     #● Asigne una contraseña para cada cuenta. La contraseña debe ser creada con random y debe
     #cumplir con los siguientes criterios: mayúsculas, minúsculas y números.
     password = ''.join(random.choice(caracteres) for _ in range(8))
-    telefono = input(f"Ingrese el número telefónico para contactarse con {usuario}: ")
+    telefono = input(f"Ingrese el número telefónico para {usuario}: ")
     #● El programa no terminará de preguntar por los números hasta que todas las organizaciones
     #tengan un número de contacto asignado.
     while len(telefono) != 8 or not telefono.isdigit():
